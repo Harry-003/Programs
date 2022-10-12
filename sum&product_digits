@@ -1,0 +1,20 @@
+
+#include <iostream>
+using namespace std;
+int main() {
+    int n;
+    cout<<"Enter the number:";
+    cin>>n;
+    int sum=0,prod=1;
+    int m=n;
+    while(m>0)
+    {
+        sum=sum+m%10;
+        prod=prod*(m%10);
+        m=m/10;
+    }
+    cout<<"Sum of the digits;"<<sum<<endl;
+    cout<<"Product of the digits:"<<prod<<endl;
+
+    return 0;
+}
