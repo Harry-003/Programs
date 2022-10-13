@@ -1,0 +1,43 @@
+ bool isvalidNumber(int n, int d){
+       
+       int digit = n%10;
+       
+       int sum = digit;
+       
+       if (digit == d)
+          return false;
+       
+       n /= 10;
+       
+       while (n){
+       
+          digit = n%10;
+       
+          if (digit == d || digit <= sum)
+             return false;
+          else{
+             sum += digit;
+             n /= 10;
+          }
+       
+           
+       }
+       return 1;
+    }
+
+    
+    vector<int> goodNumbers(int L, int R, int digit) {
+        
+        vector<int> vec;
+        
+            for (int i=L; i<=R; i++){
+                    if (isvalidNumber(i, digit) == true){
+                        vec.push_back(i);
+                    }
+                    
+            }
+            
+            return vec;
+            
+    }
+   
