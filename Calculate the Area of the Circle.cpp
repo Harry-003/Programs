@@ -7,10 +7,10 @@ class Area {
   public:
 
     void areaOfCircle(int n) {
-
-      double ans = 3.14 * n * n; // Area of circle = πr2
+      float pie=3.14;
+      double ans = pie * n * n; // Area of circle = πr2
       cout << "Area of circle is : ";
-      cout << ans;
+      cout << ans<<endl;
     }
 };
 int main() {
